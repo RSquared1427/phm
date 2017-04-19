@@ -1,0 +1,10 @@
+x<-read.table("tmp_glm_data.txt") 
+fit<-glm(x[,1]~x[,2]+x[,3]+x[,4], family="poisson")
+#summary(fit)
+out<-rep(0,3)
+out[1]<-fit$coefficients[2]
+out[2]<-fit$coefficients[3]
+out[3]<-fit$coefficients[4]
+
+write.table(round(out,6), file="tmp_glm_para.txt", row.names=F, col.names=F, sep="\t", quote=F)
+
