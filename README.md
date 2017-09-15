@@ -25,17 +25,17 @@ The full command is:
 ./phm -i heatmap_filename -v covariates_filename -NP number_of_helixpieces -NG number_of_iteration -NT tune_interval -SEED seed 
 ```
 
-heatmap_filename: string of characters, file name of the input Hi-C contact matrix.
+ * heatmap_filename: string of characters, file name of the input Hi-C contact matrix.
 
-covariates_filename: string of characters, file name of the input local genomic features.
+ * covariates_filename: string of characters, file name of the input local genomic features.
 
-number_of_helixpieces: integers, number of helixes within the piecewise helical curve. Default value is 2.
+ * number_of_helixpieces: integers, number of helixes within the piecewise helical curve. Default value is 2.
 
-number_of_iteration: integers, number of Gibbs sampler iterations. Default value is 5,000.
+ * number_of_iteration: integers, number of Gibbs sampler iterations. Default value is 5,000.
 
-tune_interval: integers, length of tune interval in HMC. Default value is 50.
+ * tune_interval: integers, length of tune interval in HMC. Default value is 50.
 
-seed: integers, seed for gsl random number generator. Default value is 1.
+ * seed: integers, seed for gsl random number generator. Default value is 1.
 
 
 Example:
@@ -114,3 +114,9 @@ mode_nui.txt: the posterior mode of the nuisance parameters (5*3 matrix).
   * Row 5: posterior mode of the mappability effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_%7Bmap%7D)).
   
   * Row 6: posterior mode of the overdispersion parameter (![](http://latex.codecogs.com/gif.latex?%5Cphi)).
+  
+## Contact
+
+Comments, suggestions, questions are welcomed, and should be directed to Rongrong Zhang.
+
+Email: zhan1602@purdue.edu
