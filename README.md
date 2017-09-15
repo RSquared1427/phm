@@ -54,3 +54,16 @@ reads spanning the i-th locus and the j-th locus.
 
 ### Format of input local genomic features
 
+The input file of local genomic features is a ![](http://latex.codecogs.com/gif.latex?N%5Ctimes%206) matrix separated by the table delimiter. For the i-th row:
+
+Column 1: chromosome name for the i-th locus.
+
+Column 2: start position for the i-th locus.
+
+Column 3: end position for the i-th locus.
+
+Column 4: number of restriction enzyme cut fragment ends in the i-th locus (positive integer).
+
+Column 5: mean GC content in the i-th locus (positive real number).
+
+Column 6: mean mappability score in the i-th locus (positive real number).
