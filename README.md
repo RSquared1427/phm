@@ -46,10 +46,11 @@ Example:
 ## Input Files
 ### Format of input Hi-C contact matrix
 
-Assume the genomic region of interest contains $N$ loci. The input file of Hi-C
-contact matrix is a $N\times N$ symmetric matrix separated by the tab delimiter.
+Assume the genomic region of interest contains ![](http://latex.codecogs.com/gif.latex?N) loci. The input file of Hi-C
+contact matrix is a ![](http://latex.codecogs.com/gif.latex?N%5Ctimes%20N) symmetric matrix separated by the tab delimiter.
 All off-diagonal numbers should be non-negative integers. All diagonal numbers
-should be zero. The number in the $(i, j)$ cell is the total number of Hi-C
-reads spanning the $i$-th locus and the $j$-th locus.
+should be zero. The number in the (i, j) cell is the total number of Hi-C
+reads spanning the i-th locus and the j-th locus.
 
 ### Format of input local genomic features
+
