@@ -93,10 +93,24 @@ record p.txt: the posterior samplers of the 3D coordinates (number of ![](http:/
 
 mode_kappa_tau.txt: the posterior mode of kappas and taus of helixes in the piecewise helical curve ![](http://latex.codecogs.com/gif.latex?%28%5Ckappa%2C%5Ctau%29).
 
-    Column 1: number of helix.
+  Column 1: number of helix.
 
-    Column 2: posterior mode of the curvature of the helix(![](http://latex.codecogs.com/gif.latex?%5Ckappa)).
+  Column 2: posterior mode of the curvature of the helix(![](http://latex.codecogs.com/gif.latex?%5Ckappa)).
     
-    Column 3: posterior mode of the torsion of the helix(![](http://latex.codecogs.com/gif.latex?%5Ctau)).
+  Column 3: posterior mode of the torsion of the helix(![](http://latex.codecogs.com/gif.latex?%5Ctau)).
     
 mode_tnb.txt: the posterior mode of t, n, b vectors in Frenet framework at the change points.
+
+mode_nui.txt: the posterior mode of the nuisance parameters (5*3 matrix).
+
+  Row 1: posterior mode of the scaling parameter (![](http://latex.codecogs.com/gif.latex?%5Cbeta_0)).
+
+  Row 2: posterior mode of the association between # of Hi-C reads and spatial distance (![](http://latex.codecogs.com/gif.latex?%5Cbeta_1)).
+  
+  Row 3: posterior mode of the restriction enzyme effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_enz)).
+  
+  Row 4: posterior mode of the GC content effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_gcc)).
+  
+  Row 5: posterior mode of the mappability effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_map)).
+  
+  Row 6: posterior mode of the overdispersion parameter (![](http://latex.codecogs.com/gif.latex?%5Cphi)).
