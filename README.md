@@ -107,10 +107,10 @@ mode_nui.txt: the posterior mode of the nuisance parameters (5*3 matrix).
 
   Row 2: posterior mode of the association between # of Hi-C reads and spatial distance (![](http://latex.codecogs.com/gif.latex?%5Cbeta_1)).
   
-  Row 3: posterior mode of the restriction enzyme effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_enz)).
+  Row 3: posterior mode of the restriction enzyme effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_%7Benz%7D)).
   
-  Row 4: posterior mode of the GC content effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_gcc)).
+  Row 4: posterior mode of the GC content effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_%7Bgcc%7D)).
   
-  Row 5: posterior mode of the mappability effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_map)).
+  Row 5: posterior mode of the mappability effect (![](http://latex.codecogs.com/gif.latex?%5Cbeta_%7Bmap%7D)).
   
   Row 6: posterior mode of the overdispersion parameter (![](http://latex.codecogs.com/gif.latex?%5Cphi)).
