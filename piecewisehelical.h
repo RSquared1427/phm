@@ -206,7 +206,7 @@ component &component::operator=(const component &rhs) {
   tvec = rhs.tvec;
   nvec = rhs.nvec;
   bvec = rhs.bvec;
-
+  
   ArcLen = rhs.ArcLen;
   ChangePoint = rhs.ChangePoint;
 
