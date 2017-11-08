@@ -246,7 +246,7 @@ int main(int argc, char **argv) {
   vector<double> IniPara;
   for (i = 0; i < 3; i++)
     IniPara.push_back(0);
-
+  
   // begin read initial value
   i = 0;
   fstream file_op_ini("tmp_glm_para.txt", ios::in);
