@@ -1,4 +1,4 @@
-// normalize weight
+// normalize weights
 
 void normalize_prob(vector<double> &w) {
   int i;
@@ -104,27 +104,24 @@ void GenerateTNB(vector<vector<double>> &tvecall,
   // calculate t, n, b
   // save t, n, b vectors into tvecall, nvecall, bvecall row by row
   for (i = 0; i < NumPiece - 1; i++) {
-    // random generate t vector, then normalize, need 5 parameters in total
+    // random generate t, n, b vector, then normalize, need 5 parameters in total
     tvecall[i + 1][0] =
-        gsl_ran_gaussian(rng, 1); //********************************
+        gsl_ran_gaussian(rng, 1); 
     tvecall[i + 1][1] =
-        gsl_ran_gaussian(rng, 1); //********************************
+        gsl_ran_gaussian(rng, 1); 
     tvecall[i + 1][2] =
-        gsl_ran_gaussian(rng, 1); //********************************
+        gsl_ran_gaussian(rng, 1); 
     double norm = sqrt(pow(tvecall[i + 1][0], 2) + pow(tvecall[i + 1][1], 2) +
                        pow(tvecall[i + 1][2], 2));
     tvecall[i + 1][0] = tvecall[i + 1][0] / norm;
     tvecall[i + 1][1] = tvecall[i + 1][1] / norm;
     tvecall[i + 1][2] = tvecall[i + 1][2] / norm;
-    cout << "the length of t vector is "
-         << sqrt(pow(tvecall[i + 1][0], 2) + pow(tvecall[i + 1][1], 2) +
-                 pow(tvecall[i + 1][2], 2))
-         << endl;
 
+    // random generate the first two coordinates of n vector, then use relationship with t to solve for the last
     nvecall[i + 1][0] =
-        gsl_ran_gaussian(rng, 1); //********************************
+        gsl_ran_gaussian(rng, 1); 
     nvecall[i + 1][1] =
-        gsl_ran_gaussian(rng, 1); //********************************
+        gsl_ran_gaussian(rng, 1); 
     nvecall[i + 1][2] = -(tvecall[i + 1][0] * nvecall[i + 1][0] +
                           tvecall[i + 1][1] * nvecall[i + 1][1]) /
                         tvecall[i + 1][2];
@@ -133,10 +130,6 @@ void GenerateTNB(vector<vector<double>> &tvecall,
     nvecall[i + 1][0] = nvecall[i + 1][0] / norm;
     nvecall[i + 1][1] = nvecall[i + 1][1] / norm;
     nvecall[i + 1][2] = nvecall[i + 1][2] / norm;
-    cout << "the length of n vector is "
-         << sqrt(pow(nvecall[i + 1][0], 2) + pow(nvecall[i + 1][1], 2) +
-                 pow(nvecall[i + 1][2], 2))
-         << endl;
 
     // b = cross product of t and  n
     bvecall[i + 1][0] = tvecall[i + 1][1] * nvecall[i + 1][2] -
@@ -150,10 +143,6 @@ void GenerateTNB(vector<vector<double>> &tvecall,
     bvecall[i + 1][0] = bvecall[i + 1][0] / norm;
     bvecall[i + 1][1] = bvecall[i + 1][1] / norm;
     bvecall[i + 1][2] = bvecall[i + 1][2] / norm;
-    cout << "the length of b vector is "
-         << sqrt(pow(bvecall[i + 1][0], 2) + pow(bvecall[i + 1][1], 2) +
-                 pow(bvecall[i + 1][2], 2))
-         << endl;
 
     if (tvecall[i + 1][0] * nvecall[i + 1][0] +
             tvecall[i + 1][1] * nvecall[i + 1][1] +
@@ -171,11 +160,6 @@ void GenerateTNB(vector<vector<double>> &tvecall,
             tvecall[i + 1][2] * bvecall[i + 1][2] <
         pow(10, -6))
       cout << "t & b are orthogonal" << endl;
-    cout << "the inner product is "
-         << tvecall[i + 1][0] * nvecall[i + 1][0] +
-                tvecall[i + 1][1] * nvecall[i + 1][1] +
-                tvecall[i + 1][2] * nvecall[i + 1][2]
-         << endl;
   }
 }
 
